@@ -23,11 +23,10 @@ Le dossier << code >> contien tous les fichiers labVIEW pour l'utilisation du pr
 
 Ouvrez le NI MAX et allez sur << Créer un ressource TCP/IP >>. Choisissez l'entrée manuelle de l'adresse et de la porte et entrée l'adresse du DAS240. La porte sera toujours la 23.
 
-![Alt text](https://github.com/FurlanLucas/Data-acquisition-with-DAS240-and-EA-9200U/fig/NIMAX.bmp)
+![Alt text](https://github.com/FurlanLucas/Data-acquisition-with-DAS240-and-EA-9200U/blob/main/fig/NIMAX.bmp)
 
 
-![Alt text](https://github.com/FurlanLucas/Data-acquisition-with-DAS240-and-EA-9200U/fig/TCPIP.bmp)
-
+![Alt text](https://github.com/FurlanLucas/Data-acquisition-with-DAS240-and-EA-9200U/blob/main/fig/TCPIP.bmp)
 
 
 ## En utilisant le logiciell
