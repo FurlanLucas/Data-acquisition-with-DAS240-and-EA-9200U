@@ -31,12 +31,13 @@ L'adresse peut être changé dans le menu de *setup* de l'apareil et la porte se
 
 Cliquez sur << finir >> et vérifié que l'entité a été bien créé. Après, allez dans << ourvir open VISA panneau >>. Le même panneau est aussi acessible dans NI-VISA Iteractive control, dans le menu initial. Das cette panneau, il sera possible commander déjà l'acquisition de données : choisissez la commande << *IDN?\n >> et cliquez sur << query >>. Si tout a été bien configuré, le DAS240 envoyerá ses coordonées qu'on pourrait voir à l'écran.
 
+Une fois tous fait et installé, il reste la configuration du DAS240.
 
 ## En utilisant le logiciell
 
 Un fois que le programme va être executé, l'user doit voir dans l'écran la face avant du VI. Elle est constitué d'une partie de génération de données à gauche et d'aquisition de données à droite. Dans un premier temps, il faut régler la connecxion avec la alimentation : dans le champ << Numéro de la machine voulue >> il faut entrer le numéro de série de la machine connecté. Si vous ne savez pas ne numéro de série, il faut executer le code un fois (avec des autres paramètres non réglé) et note la troisième colune qui aparaître dans << Machines trouvées >>. 
 
-![Alt text](https://github.com/FurlanLucas/Stage2A/blob/main/mdFig/mainVIp_markedS.png)
+![Alt text](https://github.com/FurlanLucas/Data-acquisition-with-DAS240-and-EA-9200U/blob/main/fig/mainVIp_markedS.png)
 
 La génération de données pseudo aléatoire (PRBS) peut être faite soit avec labVIEW il-même, en specifient les valeurs de fréquence et emplitude, soit avec la lecture d'un fichier CSV. Dans le dernier cas, il faut especifié le chemin pour le fichier voulu, sachant qu'il ne contiendra qu'un vector d'echantillons et l'information temporelle sera donné par la fréquence d'échantillonage. Pour générer le signal avec labVIEW, les caracteristiques suivantes doivent être especifiées :
 
@@ -53,7 +54,7 @@ Après, il faut entrer la fréquence d'échantillonage et aussi le nom de la ana
 
 Lorsque le code va être executé, il faut attendre les deux leds vertes carrées qui vont s'allumer lorsque la source d'alimentation et le sistème d'acquisition ont être trouvé et sont bien connecté. Aprés, le logicielle générera la PRBS et le dernier LED vert (le circulaire) s'allumera. Si aucune message d'erreur a aparu et les trois LEDs sont allumés, l'utilisateur peut cliquer sur << COMMENCER >>.
 
-![Alt text](https://github.com/FurlanLucas/Stage2A/blob/main/mdFig/mainVIp_markedL.png)
+![Alt text](https://github.com/FurlanLucas/Data-acquisition-with-DAS240-and-EA-9200U/blob/main/fig/mainVIp_markedL.png)
 
 Lorsque le code a été lancé, pour l'arreter **il faut absolument cliquer sur << ARRÊTER >>** pour qu'il puisse arrêter la source de tension quelque soit la tension de sortie dans le moment. Avant de commancer la simulation, l'utilisateur peut voir le deux graphes qui sont présentes à gauche : le signal d'entrée chargé/généré et l'approximation de sa DSP avec la FFT.
 
