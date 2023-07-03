@@ -19,6 +19,8 @@ Le dossier << code >> contien tous les fichiers labVIEW pour l'utilisation du pr
 4. Télechargez et executez le installateur du package NVISA, disponible en << https://www.ni.com/fr-fr/support/downloads/drivers/download.ni-visa.html#480875 >>. Il permetra d'utiliser les utils de connexion TCP/IP disponibles pour labVIEW. Il est toujours possible de le faire hors ligne. IL est aussi remarcable que il faut choisir une version compatible avec le packet labVIEW du item précédente.
 5. Télechargez et installer le *Sefram Viewer*, diponible dans le lien << https://www.sefram.com/en/software-updates.html >>.
 
+Une fois tous fait et installé, il reste la configuration du DAS240.
+
 ## Configuration du DAS240
 
 Ouvrez le NI MAX et allez sur << Créer un ressource TCP/IP >>. Choisissez l'entrée manuelle de l'adresse et de la porte et entrée ceux du DAS240. 
@@ -30,8 +32,6 @@ L'adresse peut être changé dans le menu de *setup* de l'apareil et la porte se
 ![Alt text](https://github.com/FurlanLucas/Data-acquisition-with-DAS240-and-EA-9200U/blob/main/fig/TCPIP.bmp)
 
 Cliquez sur << finir >> et vérifié que l'entité a été bien créé. Après, allez dans << ourvir open VISA panneau >>. Le même panneau est aussi acessible dans NI-VISA Iteractive control, dans le menu initial. Das cette panneau, il sera possible commander déjà l'acquisition de données : choisissez la commande << *IDN?\n >> et cliquez sur << query >>. Si tout a été bien configuré, le DAS240 envoyerá ses coordonées qu'on pourrait voir à l'écran.
-
-Une fois tous fait et installé, il reste la configuration du DAS240.
 
 ## En utilisant le logiciell
 
