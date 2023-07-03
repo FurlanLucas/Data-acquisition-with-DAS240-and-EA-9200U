@@ -61,4 +61,10 @@ Lorsque le code va être executé, il faut attendre les deux leds vertes carrée
 Lorsque le code a été lancé, pour l'arreter **<span style="color: red;">il faut absolument cliquer sur << ARRÊTER >></span>** pour qu'il puisse arrêter la source de tension quelque soit la tension de sortie dans le moment. Avant de commancer la simulation, l'utilisateur peut voir le deux graphes qui sont présentes à gauche : le signal d'entrée chargé/généré et l'approximation de sa DSP avec la FFT.
 
 ## Données acquis
-Do the frequency analysis for the transfert function F(s). Two different analysis are avaiable with 1D and 3D models. In both the Pade approximation for e^x and for some orders are shown and compared with respect to the non approximated solution.
+
+Les données acquis vont être enregistré dans le dossier donnée par << Chemin de sortie >>. Si il n'existe pas, labVIEW va le crée le dossier. Par contre, il ne va créer que un dossier : si le chemin de sortie est << test\output >> et tous les deux << test >> et << output >> n'existent pas, labVIEW vas accuser un erreur en sortie. Les fichiers enregistrée seron trois : 
+- nom_labview.csv : fichier avec tous les données enregistré par labview ;
+- nom.rec : fichier avec les données enregistré par DAS240 ;
+- nom.txt : fichier converti de nom.rec par txt avec Sefram Viewer.
+
+La récuperation des fichiers REC et la conversion par TXT sont faites dans le fichier takeFile.bat. 
