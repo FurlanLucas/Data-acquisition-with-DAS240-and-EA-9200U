@@ -3,7 +3,7 @@ rem Il va lire le fichier dedans le DAS240 et faire la convertion par txt
 
 rem --------------------------------------------------------------------
 echo Telechargement du fichier en cours
-start /wait curl -o %2\%1 "http://192.168.137.191/FileSystem/FolderREC/%1"
+start /wait curl -o %2\%1 "http://%3/FileSystem/FolderREC/%1"
 echo Saving
 rem --------------------------------------------------------------------
 
