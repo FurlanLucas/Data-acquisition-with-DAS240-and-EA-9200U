@@ -7,11 +7,11 @@ Supervisors: Stéphane Victor, Jean-Luc Battaglia and Andrzej Kusiak.
 
 ## Introduction
 
-This is a labVIEW program that was designed to control the input and data acquisition applied to a thermal system. It uses a high efficiency power supply from the EA-PSI 9200-25 series and a Sefram DAS 240 data logger. Communication with the first one is done using the Modbus USB protocol and the second uses the Modbus TCP-IP. As part of the implementation of this interface, it is important to note that a common ethernet cable **cannot be used**: you need a crossover ethernet cable or a switch (which was used).
+This is a labVIEW program that was designed to control the input and data acquisition applied to a thermal system. It uses a high efficiency power supply from the EA-PSI 9200-25 series and a Sefram DAS 240 data logger. Communication with the first one is done using the Modbus USB protocol and the second uses the Modbus TCP-IP. As part of the implementation of this interface, it is important to note that a common ethernet cable **cannot be used**: you need a crossover ethernet cable or a switch.
 
 ## Drivers and Packages
 
-The `code` directory contains all the labVIEW files for using the program. It is absolutely necessary to download and install the drivers and packages to communicate with the two machines. For instance, the following procedure must be followed:
+The `code` directory contains all the labVIEW files for using the program. It is absolutely necessary to download and install the drivers and packages to communicate with both machines. For instance, the following procedure must be followed:
 
 1. Run the PSI9000 2U USB driver installer available at the link "https://elektroautomatik.com/shop/en/service/downloads/ps-9000-t1u2u3u/". You have to choose the right version of the power supply.
 2. Download the labVIEW package for the source available in the website "https://elektroautomatik.com/shop/en/service/downloads/labVIEW/". Copy and paste the IF-XX folder with all its files into the labVIEW packages folder. Normally, it is located in the same folder that labVIEW was installed, for example: `C:Programs(x86)\NationalInstruments\labview (version)\instr.lib`. Warning, **do not create another folder**.
