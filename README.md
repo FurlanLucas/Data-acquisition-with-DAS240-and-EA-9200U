@@ -62,6 +62,6 @@ Finally, to stop the analysis, it is **<span style="color: red;">imperative to u
 The acquired data will be saved in the folder given by "Output path". If it does not exist, labVIEW will create the folder. On the other hand, it will only create one folder: if the output path is `test\output` and both `test` and `output` do not exist, labVIEW will report an output error. The files recorded will be:
 - `labview_name.csv`: file with all the data recorded by labview;
 - `name.rec`: file with the data recorded by DAS240;
-- `nom.txt`: file converted from nom.rec to txt with Sefram Viewer.
+- `nome.txt`: file converted from nom.rec to txt with Sefram Viewer.
 
 The recovery of REC files and the conversion to TXT are done in the takeFile.bat file.
