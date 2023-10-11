@@ -15,7 +15,7 @@ The `code` directory contains all the labVIEW files to use the program. It is ab
 
 1. Run the PSI9000 2U USB driver installer available at the link "https://elektroautomatik.com/shop/en/service/downloads/ps-9000-t1u2u3u/". You have to choose the right version of the power supply.
 2. Download the labVIEW package for the programmable power supply available in the website "https://elektroautomatik.com/shop/en/service/downloads/labVIEW/". Copy and paste the IF-XX folder with all its files into the labVIEW packages folder. Normally, it is located in the same folder that labVIEW was installed in, for instance: `C:Programs(x86)\NationalInstruments\labview (version)\instr.lib`. Remeber to **not create another folder**.
-3. Download the labVIEW package for the DAS240, available at "http://sine.ni.com/apps/utf8/niid_web_display.download_page?p_id_guid=61E0FD2D0F9757F5E05400144FF8B3F6". In the same way as before, copy and paste the folder with the package into `\instr.lib`. Warning, **do not create another folder**.
+3. Download the labVIEW package for the DAS240, available at "http://sine.ni.com/apps/utf8/niid_web_display.download_page?p_id_guid=61E0FD2D0F9757F5E05400144FF8B3F6". In the same way as before, copy and paste the folder with the package into `\instr.lib`. Remember to **<span style="color: red;">not create another folder</span>**.
 4. Download and run the NVISA package installer, available at "https://www.ni.com/fr-fr/support/downloads/drivers/download.ni-visa.html#480875". It will allow you to use the TCP/IP connection tools available for labVIEW. It is always possible to do it offline. It is also remarkable that it is necessary to choose a version compatible with the package labVIEW of the preceding item.
 5. Download and install the *Sefram Viewer*, available at the link "https://www.sefram.com/en/software-updates.html".
 
@@ -39,7 +39,7 @@ Once the program is going to be executed, the user should see the front face of 
 
 ![Alt text](https://github.com/FurlanLucas/Data-acquisition-with-DAS240-and-EA-9200U/blob/main/fig/mainVIp_markedS.png)
 
-If the program has connected successfully with all machines, the three green leds will be turned on. The generation of pseudo random data (PRBS) can be done either with labVIEW itself, by specifying the frequency and amplitude values, or with the reading of csv file with sampling instants. If the first one is chosen, then the following parameters have to be specified:
+If the program has connected successfully with all machines, the three green LEDs will be turned on. The generation of pseudo random data (PRBS) can be done either with labVIEW itself, by specifying the frequency and amplitude values, or with the reading of csv file with sampling instants. If the first one is chosen, then the following parameters have to be specified:
 
 * Maximum frequency (Hz): set the maximum frequency in the PRBS, giving a minimum time period of each part of the signal;
 * Maximum and minimum amplitudes (V): set the amplitudes of the PRBS;
@@ -55,4 +55,13 @@ The acquisition data is controlled by the right (red) part of the program. The f
 
 Analysis' number shows the number of the analysis located in the acquisition system, and can not be changed. Below the settings part, the data acquired in real time will be displayed. If the temperature passes the limit defined in "maximum temperature", it will automatically stop the power supply. It is also necessary to specify the thermocouple coefficient.
 
-Finally, to stop the analysis, it is imperative to use the "STOP" bottom in order to also stop the supply tension/current. If any error occurs, it will be shown in the log display in the lower right corner. 
+Finally, to stop the analysis, it is **<span style="color: red;">imperative to use the "STOP" bottom</span>** in order to also stop the supply tension/current. If any error occurs, it will be shown in the log display in the lower right corner. 
+
+## Data acquired
+
+The acquired data will be saved in the folder given by "Output path". If it does not exist, labVIEW will create the folder. On the other hand, it will only create one folder: if the output path is `test\output` and both `test` and `output` do not exist, labVIEW will report an output error. The files recorded will be:
+- `labview_name.csv`: file with all the data recorded by labview;
+- `name.rec`: file with the data recorded by DAS240;
+- `nom.txt`: file converted from nom.rec to txt with Sefram Viewer.
+
+The recovery of REC files and the conversion to TXT are done in the takeFile.bat file.
